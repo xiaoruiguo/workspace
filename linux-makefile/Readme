@@ -1,0 +1,22 @@
+## 整套Makefile包括五个文件:
+
+	Makefile : 顶层Makefile,指定要进入的目录
+	Makefile.func : 自定义的Makefile函数
+	Makefile.lib : 子目录Makefile共用检查、依赖、编译过程
+	Makefile.pub : 子目录中的Makefile共用的变量
+	Makefile.sub : 子目录中的Makefile，例如main1/makefile, 可配置子目录中的动作
+
+## 使用方法：
+
+Makefile、Makefile.func、Makefile.lib、Makefile.pub放置在同一个目录中
+
+Makefile.sub被复制到子目录中后，重命名为makefile或Makefile， 并在其中配置子目录的目标、动作、依赖规则等内容
+
+## 单独文件
+
+目录./SingleMake提供一个同样功能的Single File.
+
+## 示例
+
+Sample给出了示例
+

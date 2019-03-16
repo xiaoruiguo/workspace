@@ -1,0 +1,166 @@
+swagger: '2.0'
+info:
+  title: znr rest api
+  description: This is the api of znr services.
+  termsOfService: http://znr.io/terms/
+  contact:
+    name: znr support
+    url:  http://znr.io/support
+    email: support@znr.io
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  version: 1.0.0
+host: znr.io
+basePath: /v1
+schemes:
+  - http
+  - https
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  /item:
+    get:
+      tags:
+        - item
+      summary: get item
+      description: get item with this id.
+      externalDocs:
+        description: Find more info here
+        url: http://znr.io/item
+      operationId: getItem
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - $ref: '#/parameters/ItemID'
+        - $ref: '#/parameters/Tags'
+        - $ref: '#/parameters/TokenID'
+      responses:
+        '200':                   #can link response in "responses"
+          description: item info
+          schema:
+            $ref: '#/definitions/Item'         
+        '500':
+            $ref: '#/responses/NotFound'
+        default:
+            $ref: '#/responses/UnexpectedError'
+#        headers:
+      schemes:
+        - http
+        - https
+      deprecated: false
+#      security:
+    post:
+      tags:
+        - item
+      summary: create item
+      description: create an item.
+      externalDocs:
+        description: Find more info here
+        url: http://znr.io/item
+      operationId: createItem
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - $ref: '#/parameters/Item'
+      responses:
+        '200':                   #can link response in "responses"
+          description: item info
+          schema:
+            $ref: '#/definitions/Item'         
+        default:
+            $ref: '#/responses/UnexpectedError'
+#        headers:
+      schemes:
+        - http
+        - https
+      deprecated: false
+definitions:
+  Item:
+    type: object
+    properties:
+      id:
+        type: integer
+        format: int64
+      type:
+          type: string
+          enum:
+            - "typeA"
+            - "typeB"
+      name:
+        type: string
+        maxLength: 10
+        minLength: 5
+      tags:
+        type: array
+        items:
+          type: string
+          maxLength: 10
+          minLength: 5
+    required:
+       - name
+    example:
+      id: 1
+      name: item1
+      tags:
+        - red
+        - unused
+parameters:
+  Item:
+    name: item
+    in: body
+    description: item id
+    required: true
+    schema:
+      $ref: '#/definitions/Item'
+  ItemID:
+    name: id 
+    in: query                #query header path formData body
+    description: item id
+    required: true
+    type: integer            #string number integer boolean array file
+    format: int64
+    allowEmptyValue: false
+    maximum: 1000000
+    exclusiveMaximum: false
+    minimum: 0
+    exclusiveMinimum: true
+  Tags:
+    name: tags
+    in: query
+    description: item tags
+    required: true
+    type: array
+    allowEmptyValue: true
+    items:
+      type: string           #string number integer boolean array
+      maxLength: 10
+      minLength: 5
+    collectionFormat: multi
+  TokenID:
+    name: tokenid
+    in: header
+    description: token id
+    required: true
+    type: string
+    maxLength: 10
+    minLength: 10
+responses:
+  NotFound:
+    description: Not Found
+#    schema:
+#    headers:
+#    examples:
+  UnexpectedError:
+    description: Unexpected Error
+
+#securityDefinitions:
+#security:
+#tags:
+#externalDocs:

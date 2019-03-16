@@ -1,0 +1,9 @@
+list:
+- item1
+- item2
+- item3
+map:
+  sub-map1: sub-map1
+  sub-map2: sub-map2
+title: this is title
+zh: !!python/str '中文'

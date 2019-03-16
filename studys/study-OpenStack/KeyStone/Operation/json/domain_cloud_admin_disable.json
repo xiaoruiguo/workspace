@@ -1,0 +1,7 @@
+{
+    "domain": {
+        "description": "Domain: cloud_admin",
+        "enabled": false,
+        "name": "cloud_admin"
+    }
+}

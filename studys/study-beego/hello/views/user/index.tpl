@@ -1,0 +1,1 @@
+/Users/lijiao/Work/Docker/GOPATH/src/github.com/lijiaocn/study-beego/hello/views/user/index.tpl

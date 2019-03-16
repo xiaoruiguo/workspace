@@ -1,0 +1,18 @@
+{
+	"auth":{
+		"identity":{
+			"methods":[
+				"password"
+			],
+			"password":{
+				"user":{
+					"name": "admin@mail.com",
+					"domain":{
+						"id": "c20b7508d23342148a7cf1b64112706f"
+					},
+					"password":"123456"
+				}
+			}
+		}
+	}
+}

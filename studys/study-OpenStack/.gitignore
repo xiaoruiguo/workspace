@@ -1,0 +1,8 @@
+.vagrant
+*.swp
+*.log
+*.sample
+*~
+Data
+Source
+virtualenv

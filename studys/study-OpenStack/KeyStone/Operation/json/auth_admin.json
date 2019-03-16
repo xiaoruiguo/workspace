@@ -1,0 +1,18 @@
+{
+    "auth": {
+        "identity": {
+            "methods": [
+                "password"
+            ],
+            "password": {
+                "user": {
+                    "name": "admin@jd.com",
+                    "domain": {
+                        "name": "cloud_admin"
+                    },
+                    "password": "123456"
+                }
+            }
+        }
+    }
+}

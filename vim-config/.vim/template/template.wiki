@@ -1,0 +1,18 @@
+:% s/etitle/\=expand('%:t:r')/ge
+:% s/createtime/\=strftime("%Y\/%m\/%d %H:%M:%S")/ge
+:% s/changetime/\=strftime("%Y\/%m\/%d %H:%M:%S")/ge
+ = etitle =
+<div class=pageinfo>创建时间: createtime  修改时间: changetime</div><p>
+%toc
+%title etitle-LJA Blog
+<div class=copyright>本文档采用"署名-非商业性使用-相同方式共享"协议,转载时请保留本文档的原始URL:<br><script>printURL()</script></div>
+== 资料 ==
+*
+== 说明 ==
+
+== 文档 ==
+
+== 实例 ==
+
+
+

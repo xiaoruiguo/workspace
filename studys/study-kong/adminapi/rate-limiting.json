@@ -1,0 +1,9 @@
+{
+    "name": "rate-limiting",
+    "config": {
+        "minute": 20,
+        "hour": 500
+    },
+    "enabled": true,
+    "created_at": 1422386534
+}

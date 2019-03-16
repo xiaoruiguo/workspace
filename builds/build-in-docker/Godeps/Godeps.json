@@ -1,0 +1,14 @@
+{
+	"ImportPath": "github.com/lijiaocn/build-in-docker",
+	"GoVersion": "go1.8",
+	"GodepVersion": "v79",
+	"Packages": [
+		"./..."
+	],
+	"Deps": [
+		{
+			"ImportPath": "github.com/lijiaocn/GoPkgs/version",
+			"Rev": "5247514d9f21e76d8f18cf471a5c7f2520644bca"
+		}
+	]
+}

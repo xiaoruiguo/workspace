@@ -1,0 +1,34 @@
+user:
+    userID
+    userName:
+    userPasswd:
+    userPhone:
+
+craft:
+    craftID
+    authorID
+    craftName
+    craftTag
+    craftPermission  自己可见;公开;
+    craftDesc    //作品描述
+    craftShop    //购买链接
+    craftAudio   //音频
+    craftVideo   //视频
+    craftPic1    //正面图
+    craftPic2    //背面图
+    craftPic3    //左侧面图
+    craftPic4    //右侧面图
+    craftPic5    //俯视图
+    craftPic6    //仰视图
+    craftPic7    //智能合成三维图
+    craftPic8    //细节图
+
+post /register/   //注册
+post /login/      //登陆
+post /craft/      //上传作品
+post /audio/      //音频
+post /video/      //视频
+put  /craft/      //修改作品
+post /pic/        //上传图片
+delete /craft/    //删除作品
+

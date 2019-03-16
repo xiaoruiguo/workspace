@@ -1,0 +1,3 @@
+#!/bin/sh
+
+LUAROCKS_SYSCONFDIR='/usr/local/etc/luarocks' LUA_INIT='package.path="/usr/local/Cellar/luarocks/3.0.1/share/lua/5.3/?.lua;/usr/local/share/lua/5.3/?.lua;/usr/local/share/lua/5.3/?/init.lua;/usr/local/lib/lua/5.3/?.lua;/usr/local/lib/lua/5.3/?/init.lua;./?.lua;./?/init.lua;/Users/lijiao/.luarocks/share/lua/5.3/?.lua;/Users/lijiao/.luarocks/share/lua/5.3/?/init.lua";package.cpath="/usr/local/lib/lua/5.3/?.so;/usr/local/lib/lua/5.3/loadall.so;./?.so;/Users/lijiao/.luarocks/lib/lua/5.3/?.so"' exec '/usr/local/opt/lua/bin/lua5.3' '/usr/local/bin/luarocks' --project-tree /Users/lijiao/Work-Finup/workspace/studys/study-lua/luarocks/lua_modules "$@"

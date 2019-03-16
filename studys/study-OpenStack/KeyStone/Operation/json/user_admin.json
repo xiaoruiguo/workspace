@@ -1,0 +1,10 @@
+{
+    "user": {
+        "description": "admin@mail.com",
+        "domain_id": "c20b7508d23342148a7cf1b64112706f",
+        "email": "admin@mail.com",
+        "enabled": true,
+        "name": "admin@mail.com",
+        "password": "123456"
+    }
+}

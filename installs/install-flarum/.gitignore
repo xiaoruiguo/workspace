@@ -1,0 +1,4 @@
+0_php/php-7.2.0
+0_php/*.tar.gz2
+2_flarum/project/*
+*.swp

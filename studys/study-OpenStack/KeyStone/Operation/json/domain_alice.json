@@ -1,0 +1,7 @@
+{
+    "domain": {
+        "description": "Domain: alice",
+        "enabled": true,
+        "name": "alice"
+    }
+}

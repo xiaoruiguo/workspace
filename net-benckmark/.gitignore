@@ -1,0 +1,10 @@
+*.swp
+*.
+out
+output
+*.pem
+*.csr
+log
+bin
+certs
+Release/*

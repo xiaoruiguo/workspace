@@ -1,0 +1,78 @@
+post:
+    tags:
+        - user
+    summary: 注册一个新用户
+    description: 注册一个新用户,由后台分配的资源被忽略，例如用户ID
+    operationId: userPost
+    parameters:
+        - name: userInfo
+          in: body
+          description: 新用户注册信息，ID为空
+          required: true
+          schema:
+              $ref: '#/definitions/UserInfo'
+    responses:       
+        '200':
+            schema:
+                - $ref: '#/responses/Success'
+        default:
+            $ref: '#/responses/UnExpected'
+patch:
+    tags:
+        - user
+    summary: 部分更新用户信息
+    description: 部分更新用户信息,为空的字段不更新
+    operationId: userPatch
+    parameters:
+        - name: userInfo
+          in: body
+          description: 用户信息，必须有用户ID
+          required: true
+          schema:
+              $ref: '#/definitions/UserInfo'
+    responses:       
+        '200':
+            schema:
+                - $ref: '#/responses/Success'
+        default:
+            $ref: '#/responses/UnExpected'
+get:
+    tags:
+        - user
+    summary: 获取用户信息
+    description: 获取指定ID的用户信息
+    operationId: userGet
+    parameters:
+        - name: userid
+          in:  query  
+          description: 用户ID
+          required: true
+          type: string
+          allowEmptyValue: false
+    responses:       
+        '200':
+            schema:
+                - $ref: '#/definitions/UserInfo'
+        '404':
+            $ref: '#/responses/NotFound'
+        default:
+            $ref: '#/responses/UnExpected'
+delete:
+    tags:
+        - user
+    summary: 删除用户
+    description: 删除用户
+    operationId: userDelete
+    parameters:
+        - name: userid
+          in:  query  
+          description: 用户ID
+          required: true
+          type: string
+          allowEmptyValue: false
+    responses:       
+        '200':
+            schema:
+                - $ref: '#/responses/Success'
+        default:
+            $ref: '#/responses/UnExpected'

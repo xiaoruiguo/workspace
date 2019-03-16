@@ -1,0 +1,10 @@
+setup.cfg
+setup.py
+HelloWorld.egg-info/PKG-INFO
+HelloWorld.egg-info/SOURCES.txt
+HelloWorld.egg-info/dependency_links.txt
+HelloWorld.egg-info/entry_points.txt
+HelloWorld.egg-info/pbr.json
+HelloWorld.egg-info/top_level.txt
+package1/__init__.py
+package1/hello.py

@@ -1,0 +1,7 @@
+[console_scripts]
+lijiao = package1.hello:bye
+
+[lijiao.test]
+bye = package1.hello:bye
+hello = package1.hello:hello
+
