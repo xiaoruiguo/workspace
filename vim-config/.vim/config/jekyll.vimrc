@@ -8,6 +8,7 @@ let g:jekyll_post_template =  [
   \ 'changedate: "JEKYLL_DATE"',
   \ 'categories:',
   \ 'tags:',
+  \ 'cover:',
   \ 'keywords:',
   \ 'description:',
   \ '---',
@@ -21,5 +22,5 @@ let g:jekyll_post_template =  [
   \ '',
   \ '1. [文献][1]',
   \ '',
-  \ '[1]: 1.com "文献1',
+  \ '[1]: 1.com "文献1"',
   \ '']
