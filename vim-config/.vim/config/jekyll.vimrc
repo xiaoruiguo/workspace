@@ -13,6 +13,8 @@ let g:jekyll_post_template =  [
   \ 'description:',
   \ '---',
   \ '',
+  \ '## 本篇目录',
+  \ '',
   \ '* auto-gen TOC:',
   \ '{:toc}',
   \ '',
@@ -20,7 +22,7 @@ let g:jekyll_post_template =  [
   \ '',
   \ '## 参考',
   \ '',
-  \ '1. [文献][1]',
+  \ '1. [李佶澳的博客笔记][1]',
   \ '',
-  \ '[1]: 1.com "文献1"',
+  \ '[1]: https://www.lijiaocn.com "李佶澳的博客笔记"',
   \ '']
