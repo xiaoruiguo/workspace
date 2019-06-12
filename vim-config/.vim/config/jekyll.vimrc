@@ -22,7 +22,7 @@ let g:jekyll_post_template =  [
   \ '',
   \ '## 参考',
   \ '',
-  \ '1. [李佶澳的博客笔记][1]',
+  \ '1. [李佶澳的博客][1]',
   \ '',
-  \ '[1]: https://www.lijiaocn.com "李佶澳的博客笔记"',
+  \ '[1]: https://www.lijiaocn.com "李佶澳的博客"',
   \ '']
