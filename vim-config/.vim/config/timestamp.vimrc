@@ -17,6 +17,11 @@ endfun
 function! MdTimestampUpdate()
 	:silent! exec ":1,6 s#last_modified_at: \"\\d\\{4}[\/-]\\d\\{2}[\/-]\\d\\{2} \\d\\{1,2}:\\d\\{2}:\\d\\{2} \+0800#last_modified_at: \"".strftime('%Y-%m-%d %H:%M:%S +0800')
 	:silent! exec ":1,$ s#http://127.0.0.1:4000#https://www.lijiaocn.com#"
+	:silent! exec ":1,$ s#http://127.0.0.1:4001#https://www.lijiaocn.com/jekyll-template-blog#"
+	:silent! exec ":1,$ s#http://127.0.0.1:4002#https://www.lijiaocn.com/tutorial#"
+	:silent! exec ":1,$ s#http://127.0.0.1:4003#https://www.lijiaocn.com/coder#"
+	:silent! exec ":1,$ s#http://127.0.0.1:4004#https://www.lijiaocn.com/money#"
+	:silent! exec ":1,$ s#http://127.0.0.1:4005#https://www.lijiaocn.com/life#"
 endfun
 
 autocmd BufWritePre,FileWritePre *.wiki  ks|call TimestampUpdate()|'s
