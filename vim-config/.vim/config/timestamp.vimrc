@@ -15,7 +15,7 @@ function! GoTimestampUpdate()
 endfun
 
 function! MdTimestampUpdate()
-	:silent! exec ":1,6 s#changedate: \"\\d\\{4}[\/-]\\d\\{2}[\/-]\\d\\{2} \\d\\{1,2}:\\d\\{2}:\\d\\{2} \+0800#changedate: \"".strftime('%Y-%m-%d %H:%M:%S +0800')
+	:silent! exec ":1,6 s#last_modified_at: \"\\d\\{4}[\/-]\\d\\{2}[\/-]\\d\\{2} \\d\\{1,2}:\\d\\{2}:\\d\\{2} \+0800#last_modified_at: \"".strftime('%Y-%m-%d %H:%M:%S +0800')
 	:silent! exec ":1,$ s#http://127.0.0.1:4000#https://www.lijiaocn.com#"
 endfun
 
