@@ -1,0 +1,7 @@
+apiVersion: test.com/v1
+kind: SelfCRD
+metadata:
+  name: example-selfcrd
+spec:
+  # Add fields here
+  size: 3
