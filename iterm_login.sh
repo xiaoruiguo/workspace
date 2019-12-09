@@ -15,21 +15,19 @@ expect {
         "password:"
         {send "[lindex \$argv 2]\n"}
         "Select group:"
-        {send "/172.31.160.93\n"}
-        "Select account:"
-        {interact}
-#        "Last login"
-#        {interact}
+        {send "/192.168.197.3\n"}
 }
 
-expect {
-        "Select account:"
-        {send "7\n"}
-}
-expect {
-        "Last login"
-        {interact}
-}
+#expect {
+#        "Select account:"
+#        {send "7\n"}
+#}
+
+#expect {
+#        "Last login"
+#        {interact}
+#}
+
 interact
 XXX
 
