@@ -5,14 +5,15 @@ rm -ff ~/.vimrc
 ln -s `pwd`/.vim    ~/.vim
 ln -s `pwd`/.vimrc  ~/.vimrc
 
-#git submodule update --init --recursive
-
 pushd  ~/.vim/
 	bash ./install_bundle.sh
 popd
 
 pushd  ~/.vim/bundle/YouCompleteMe
-	git submodule update --init --recursive
+#	git submodule update --init --recursive
+	export LDFLAGS="-L/usr/local/opt/openssl/lib"
+	export CPPFLAGS="-I/usr/local/opt/openssl/include"
+	export PKG_CONFIG_PATH="/usr/local/opt/openssl/lib/pkgconfig"
 	./install.py --clang-completer --go-completer
 popd
 
