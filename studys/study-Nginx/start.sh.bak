@@ -11,6 +11,10 @@ if [ "$#" != "1" ];then
 	exit
 fi
 
+if [ ! -d "/usr/local/etc/nginx/servers/" ];then
+	mkdir -p /usr/local/etc/nginx/servers/ 
+fi
+
 conf=echo.example.conf
 rm -f /usr/local/etc/nginx/servers/$conf
 ln -s `pwd`/$1/$conf /usr/local/etc/nginx/servers/$conf

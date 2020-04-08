@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>My first Vue app</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+
+<body>
+<div id="root">{{ msg }}</div>  <!-- 用插值表达式 -->
+<div id="root2" v-text="msg"></div>  <!-- 用 vue 指令 v-text -->
+<div id="root3" v-on:click="handleClick">{{msg}}</div>  <!-- 绑定事件 -->
+<script>
+    new Vue ({
+        el: "#root",
+        data:{
+            msg: "hello world 1"
+        }
+    })
+
+    new Vue ({
+        el: "#root2",
+        data:{
+            msg: "hello world 2"
+        }
+    })
+
+    new Vue ({
+        el: "#root3",
+        data:{
+            msg: "hello world 3"
+        },
+        methods:{
+            handleClick: function () {
+                this.msg = "you click it"
+            }
+        }
+    })
+</script>
+</body>
+</html>
